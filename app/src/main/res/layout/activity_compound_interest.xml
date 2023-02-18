@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.tauleshwarthakur.byaj.CompoundInterest"
+
+        >
+
+
+        <TextView
+            android:id="@+id/byajStartDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/byaj_start_title"
+            android:textColor="#2F7A6F"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advanceSwitchd" />
+
+        <EditText
+            android:id="@+id/yearInput"
+            android:layout_width="88dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints="8"
+            android:ems="10"
+            android:inputType="number"
+            android:labelFor="@id/yearInput"
+            android:maxLength="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/year_title" />
+
+        <EditText
+            android:id="@+id/monthInput"
+            android:layout_width="88dip"
+            android:layout_height="45dip"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints="@string/dm_text"
+            android:ems="10"
+            android:inputType="number"
+            android:labelFor="@id/monthInput"
+            android:maxLength="2"
+            app:layout_constraintStart_toEndOf="@+id/yearInput"
+            app:layout_constraintTop_toTopOf="@+id/month_titile" />
+
+        <EditText
+            android:id="@+id/dayInput"
+            android:layout_width="88dip"
+            android:layout_height="45dip"
+            android:layout_marginTop="28dp"
+            android:autofillHints="@string/dm_text"
+            android:ems="10"
+            android:inputType="number"
+            android:labelFor="@id/dayInput"
+            android:maxLength="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.264"
+            app:layout_constraintStart_toEndOf="@+id/monthInput"
+            app:layout_constraintTop_toTopOf="@+id/day_title" />
+
+        <TextView
+            android:id="@+id/month_titile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/month_title"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toEndOf="@+id/year_title"
+            app:layout_constraintTop_toBottomOf="@+id/byajStartDateTitle" />
+
+        <TextView
+            android:id="@+id/day_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/day_title"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/dayInput"
+            app:layout_constraintHorizontal_bias="0.686"
+            app:layout_constraintStart_toEndOf="@+id/month_titile"
+            app:layout_constraintTop_toBottomOf="@+id/byajStartDateTitle" />
+
+        <TextView
+            android:id="@+id/year_title"
+            android:layout_width="44dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="sans-serif-black"
+            android:labelFor="@id/yearInput"
+            android:text="@string/year_title"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toStartOf="@+id/yearInput"
+            app:layout_constraintTop_toTopOf="@+id/month_titile" />
+
+        <EditText
+            android:id="@+id/monthInput3"
+            android:layout_width="88dip"
+            android:layout_height="45dip"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:autofillHints="Months"
+            android:ems="10"
+            android:inputType="number"
+            android:labelFor="@id/monthInput"
+            android:maxLength="2"
+            app:layout_constraintStart_toEndOf="@+id/yearInput3"
+            app:layout_constraintTop_toTopOf="@+id/month_titile2" />
+
+        <TextView
+            android:id="@+id/byajEndDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/byaj_end_title"
+            android:textColor="#2F7A6F"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monthInput" />
+
+        <EditText
+            android:id="@+id/yearInput3"
+            android:layout_width="88dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="24dp"
+            android:autofillHints="@string/dm_text"
+            android:ems="10"
+            android:inputType="number"
+            android:labelFor="@id/yearInput"
+            android:maxLength="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/year_title2" />
+
+        <TextView
+            android:id="@+id/month_titile2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:labelFor="@id/monthInput3"
+            android:text="@string/month_title"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toEndOf="@+id/year_title2"
+            app:layout_constraintTop_toBottomOf="@+id/byajEndDateTitle" />
+
+        <TextView
+            android:id="@+id/day_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:labelFor="@+id/dayInput2"
+            android:text="@string/day_title"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/dayInput2"
+            app:layout_constraintHorizontal_bias="0.669"
+            app:layout_constraintStart_toEndOf="@+id/month_titile2"
+            app:layout_constraintTop_toBottomOf="@+id/byajEndDateTitle" />
+
+        <TextView
+            android:id="@+id/year_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:labelFor="@id/yearInput3"
+            android:text="@string/year_title"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toStartOf="@+id/yearInput3"
+            app:layout_constraintTop_toBottomOf="@+id/byajEndDateTitle" />
+
+        <EditText
+            android:id="@+id/dayInput2"
+            android:layout_width="88dip"
+            android:layout_height="45dip"
+            android:layout_marginTop="24dp"
+            android:autofillHints="@string/dm_text"
+            android:ems="10"
+            android:inputType="number"
+            android:labelFor="@id/dayInput"
+            android:maxLength="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.252"
+            app:layout_constraintStart_toEndOf="@+id/monthInput3"
+            app:layout_constraintTop_toTopOf="@+id/day_title2" />
+
+        <TextView
+            android:id="@+id/interestTitle"
+            android:layout_width="202dp"
+            android:layout_height="28dp"
+            android:labelFor="@id/interestInput"
+            android:shadowColor="#53AA8B"
+            android:text="@string/interest_title"
+            android:textAlignment="center"
+            android:textColor="#4D96B8"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/principle_title"
+            app:layout_constraintTop_toTopOf="@+id/principle_title" />
+
+        <EditText
+            android:id="@+id/principleInput"
+            android:layout_width="132dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:autofillHints="@string/principle_title"
+            android:ems="10"
+            android:inputType="number"
+            android:scrollbarSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/interestInput"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principle_title" />
+
+        <ImageView
+            android:id="@+id/rupeeIcon"
+            android:layout_width="25dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="rupeeIcon"
+            app:layout_constraintEnd_toStartOf="@+id/principleInput"
+            app:layout_constraintHorizontal_bias="0.684"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principle_title"
+            app:srcCompat="@drawable/rupee" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="22dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/interestInput"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/principleInput"
+            app:layout_constraintTop_toBottomOf="@+id/interestTitle"
+            app:srcCompat="@drawable/percent" />
+
+        <EditText
+            android:id="@+id/interestInput"
+            android:layout_width="85dp"
+            android:layout_height="44dip"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/interest_title"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="4"
+            android:scrollbarSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.193"
+            app:layout_constraintStart_toStartOf="@+id/interestTitle"
+            app:layout_constraintTop_toBottomOf="@+id/interestTitle" />
+
+        <TextView
+            android:id="@+id/principle_title"
+            android:layout_width="94dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="248dp"
+            android:labelFor="@id/principleInput"
+            android:text="@string/principle_title"
+            android:textColor="#AC6C6C"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.579"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advaceRadios" />
+
+        <TextView
+            android:id="@+id/totalAmountDisplay"
+            android:layout_width="341dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/total_amount_title"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/interestRateDisplay"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/interestRateDisplay"
+            app:layout_constraintTop_toBottomOf="@+id/interestRateDisplay" />
+
+        <TextView
+            android:id="@+id/interestRateDisplay"
+            android:layout_width="340dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/interest_title_"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculate_btn" />
+
+        <Button
+            android:id="@+id/calculate_btn"
+            android:layout_width="136dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="36dp"
+            android:background="@color/light_blue"
+            android:text="@string/calculate_title"
+
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="78dp"
+            android:layout_height="41dip"
+            android:background="@color/teal_700"
+            android:fontFamily="sans-serif-medium"
+            android:text="NEW"
+
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toEndOf="@+id/calculate_btn"
+            app:layout_constraintTop_toTopOf="@+id/calculate_btn" />
+
+        <Button
+            android:id="@+id/detailedResult"
+            android:layout_width="186dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="#8557898E"
+
+            android:fontFamily="@font/fugaz_one"
+            android:text="@string/detail"
+            android:textColor="@color/purple_700"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/totalAmountDisplay"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="@+id/totalAmountDisplay"
+            app:layout_constraintTop_toBottomOf="@+id/totalAmountDisplay"
+            app:layout_constraintVertical_bias="0.826" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/advaceRadios"
+            android:layout_width="393dp"
+            android:layout_height="126dp"
+            android:layout_marginTop="4dp"
+            android:background="#59CBE2FF"
+            android:textAlignment="center"
+
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/compoundsTitle">
+
+            <TextView
+                android:id="@+id/select_I_title"
+                android:layout_width="172dp"
+                android:layout_height="23dp"
+                android:fontFamily="@font/nova_flat"
+                android:text="Select Interest Type"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/compundSelect"
+                android:layout_width="172dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nova_flat"
+                android:text="Compounds"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interestRadioGroup" />
+
+            <RadioGroup
+                android:id="@+id/compondRadios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/compundSelect">
+
+                <RadioButton
+                    android:id="@+id/quarter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="checkButton"
+                    android:text="Every Quarter" />
+
+                <RadioButton
+                    android:id="@+id/everySixMonths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="checkButton"
+                    android:text="Every 6 Months" />
+
+
+                <RadioButton
+                    android:id="@+id/everyYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="checkButton"
+                    android:text="Every Year" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/interestRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select_I_title">
+
+                <RadioButton
+                    android:id="@+id/yearlyInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="checkButton"
+                    android:text="Yearly" />
+
+
+                <RadioButton
+                    android:id="@+id/halfYearlyInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="checkButton"
+                    android:text="Half Yearly" />
+
+                <RadioButton
+                    android:id="@+id/monthlyInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="checkButton"
+                    android:text="Monthly" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/compoundsTitle"
+            android:layout_width="351dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:background="#66929BB1"
+            android:text="Compounds every Year"
+            android:textAlignment="center"
+            android:textColor="#1F5771"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monthInput3" />
+
+        <Switch
+            android:id="@+id/advanceSwitchd"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="4dp"
+            android:background="#10655B"
+            android:fontFamily="casual"
+            android:text="Advance Mode"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

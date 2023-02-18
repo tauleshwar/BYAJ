@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailResult"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tauleshwarthakur.byaj.Result">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:backgroundTint="#10655B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#A58888"
+        app:srcCompat="?attr/actionModeShareDrawable"
+        />
+
+    <ScrollView
+        android:layout_width="363dp"
+        android:layout_height="550dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/invoiceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10sp"
+            android:background="#FFFFFF"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15">
+
+            <TextView
+                android:id="@+id/startDateTitle"
+                android:layout_width="140sp"
+                android:layout_height="41dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-black"
+                android:text="STARTED ON"
+                android:textAlignment="center"
+                android:textColor="#88898F"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recieptTypeDisplay" />
+
+            <TextView
+                android:id="@+id/startDateDisplay"
+                android:layout_width="140sp"
+                android:layout_height="22dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:text="25/6/2015"
+                android:textAlignment="center"
+                android:textColor="#5D6E6B"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/startDateTitle"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/startDateTitle"
+                app:layout_constraintTop_toBottomOf="@+id/startDateTitle" />
+
+            <TextView
+                android:id="@+id/endDateTitle"
+                android:layout_width="140sp"
+                android:layout_height="42dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-black"
+                android:text="ENDED ON"
+                android:textAlignment="center"
+                android:textColor="#88898F"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/startDateTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.851"
+                app:layout_constraintStart_toEndOf="@+id/startDateTitle"
+                app:layout_constraintTop_toBottomOf="@+id/recieptTitle" />
+
+            <TextView
+                android:id="@+id/endDateDisplay"
+                android:layout_width="140sp"
+                android:layout_height="22sp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:text="21/5/2021"
+                android:textAlignment="center"
+                android:textColor="#5D6E6B"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/endDateTitle"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="@+id/endDateTitle"
+                app:layout_constraintTop_toBottomOf="@+id/endDateTitle" />
+
+            <TextView
+                android:id="@+id/runTimeTitle"
+                android:layout_width="164dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif-black"
+                android:text="BYAJ  RUNTIME : "
+                android:textAlignment="textEnd"
+                android:textColor="#88898F"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.133"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startDateDisplay" />
+
+            <TextView
+                android:id="@+id/runTimeDisplay"
+                android:layout_width="164dp"
+                android:layout_height="27dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:text="1Y 9M 2D"
+                android:textAlignment="center"
+                android:textColor="#5D6E6B"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/runTimeTitle"
+                app:layout_constraintTop_toTopOf="@+id/runTimeTitle" />
+
+            <TextView
+                android:id="@+id/principleTitle"
+                android:layout_width="156dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="PRINCIPLE"
+                android:textAlignment="center"
+                android:textColor="#667370"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/runTimeTitle" />
+
+            <TextView
+                android:id="@+id/principleDisplay"
+                android:layout_width="342dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:text="2000015"
+                android:textAlignment="center"
+                android:textColor="#62B9BC"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/principleTitle"
+                app:layout_constraintStart_toStartOf="@+id/principleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/runTimeTitle" />
+
+            <TextView
+                android:id="@+id/interestRateTitle"
+                android:layout_width="178dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="INTEREST"
+                android:textAlignment="center"
+                android:textColor="#667370"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/principleDisplay" />
+
+            <TextView
+                android:id="@+id/interestRateDisplay"
+                android:layout_width="353dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="serif-monospace"
+                android:text="3% per month"
+                android:textAlignment="center"
+                android:textColor="#C12323"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interestRateTitle" />
+
+            <TextView
+                android:id="@+id/totalInterestTitle"
+                android:layout_width="116dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:shadowColor="#88898F"
+                android:text="INTEREST :"
+                android:textColor="#88898F"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interestRateDisplay" />
+
+            <TextView
+                android:id="@+id/totalInterestDisplay"
+                android:layout_width="224dp"
+                android:layout_height="45dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:shadowColor="#DDDEEA"
+                android:text="20151516269262"
+                android:textColor="#468A8C"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/totalInterestTitle"
+                app:layout_constraintTop_toTopOf="@+id/totalInterestTitle" />
+
+            <TextView
+                android:id="@+id/totalAmoutTitle"
+                android:layout_width="168dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-black"
+                android:shadowColor="#88898F"
+                android:text="TOTAL AMOUNT : "
+                android:textColor="#88898F"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalInterestTitle" />
+
+            <TextView
+                android:id="@+id/recieptTitle"
+                android:layout_width="223dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/chango"
+                android:text="BIYAJ INVOICE"
+                android:textColor="#BFA09FA3"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recieptTypeDisplay"
+                android:layout_width="191dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/nova_flat"
+                android:text="SIMPLE INTEREST"
+                android:textAlignment="center"
+                android:textColor="#AAA4A4"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recieptTitle" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="71dp"
+                android:layout_height="76dp"
+                android:background="#006C0000"
+                app:layout_constraintEnd_toStartOf="@+id/recieptTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/byaj_logo" />
+
+            <TextView
+                android:id="@+id/createdOn"
+                android:layout_width="64dp"
+                android:layout_height="17dp"
+                android:fontFamily="sans-serif-black"
+                android:text="3/6/2021"
+                android:textAlignment="center"
+                android:textColor="#2C2626"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="73dp"
+                android:layout_height="18dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="CREATED ON"
+                android:textColor="#373C59"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/endDateTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/recieptTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.32" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/principleTitle"
+                app:layout_constraintStart_toStartOf="@+id/principleTitle"
+                app:layout_constraintTop_toTopOf="@+id/principleTitle"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/rupee" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/interestRateTitle"
+                app:layout_constraintStart_toStartOf="@+id/interestRateTitle"
+                app:layout_constraintTop_toTopOf="@+id/interestRateTitle"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/percent" />
+
+            <TextView
+                android:id="@+id/totalAmoutDisplay2"
+                android:layout_width="177dp"
+                android:layout_height="100dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:shadowColor="#DDDEEA"
+                android:text="20151516269262"
+                android:textColor="#468A8C"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/totalAmoutTitle"
+                app:layout_constraintTop_toTopOf="@+id/totalAmoutTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

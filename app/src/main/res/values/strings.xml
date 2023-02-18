@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name" translatable="false">BYAJ</string>
+    <string name="si_titile">Simple Interest</string>
+
+    <string name="byaj_start_title">Byaj Starting Date</string>
+    <string name="byaj_end_title">Byaj Ending Date</string>
+    <string name="dm_text">Dummy Text</string>
+
+
+    <string name="year_title">YEAR</string>
+    <string name="month_title">MONTH</string>
+    <string name="day_title">DAY</string>
+
+    <string name="principle_title">Principle</string>
+    <string name="interest_title">Interest (Monthly)</string>
+
+    <string name="calculate_title">Calculate</string>
+    <string name="interest_title_">Interest</string>
+    <string name="total_amount_title">Total Amount</string>
+    <string name="detail">Detail</string>
+    <string name="advance_interest">Advance Interest Type</string>
+</resources>
